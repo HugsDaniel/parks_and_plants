@@ -1,0 +1,6 @@
+<%= simple_form_for [ @garden, @plant ] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo_url %>
+
+  <%= f.submit "Add" %>
+<% end %>
