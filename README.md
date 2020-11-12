@@ -4,6 +4,9 @@
  - As a user, I can add a plant to a garden
  - As a user, I can delete a plant
 
+ - As a user, I can add a tag to a plant
+ - As a user, I can see plant's tags
+
 
 # MODELS
 
