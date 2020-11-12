@@ -5,6 +5,8 @@
  - As a user, I can delete a plant
 
  - As a user, I can add a tag to a plant
+ ===> on crée un plant_tag qui va référencer ma plante et mon tag
+
  - As a user, I can see plant's tags
 
 

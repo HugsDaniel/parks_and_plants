@@ -1,0 +1,7 @@
+<%= simple_form_for [@plant, @plant_tag] do |f| %>
+
+  <%= f.association :tag, input_html: { class: 'select2' } %>
+
+  <%= f.submit "Add" %>
+
+<% end %>

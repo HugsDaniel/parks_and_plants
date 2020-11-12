@@ -9,10 +9,25 @@
 
   <div class="cards">
     <% @garden.plants.each do |plant| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= plant.photo_url %>)">
+      <div class="card-category d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= plant.photo_url %>)">
         <p> <%= plant.name %></p>
         <%= link_to "Supprimer", plant_path(plant), method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure ?" } %>
+
+        <%= link_to "Add a tag", new_plant_plant_tag_path(plant), class: "btn btn-primary btn-sm" %>
+
+        <!-- ???? -->
+        <% plant.tags.each do |tag| %>
+          <span class="badge badge-success">
+            <%= tag.name %>
+          </span>
+        <% end %>
       </div>
     <% end %>
   </div>
 </div>
+
+
+
+
+
+
