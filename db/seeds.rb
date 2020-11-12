@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Garden.destroy_all if Rails.env.development?
+Tag.destroy_all if Rails.env.development?
 
 Garden.create!(
   name: "My Little Garden",
@@ -16,3 +17,9 @@ Garden.create!(
   name: "My Other Garden",
   banner_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/garden_2.jpg"
 )
+
+names = %w(Fruit\ tree Cactus Greasy\ plant Flower Ferns Conifers)
+
+names.each do |name|
+  Tag.create!(name: name)
+end
